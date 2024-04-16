@@ -9,7 +9,7 @@ const quizData = [
         options: ["3", "4", "5", "6"],
         answer: "4"
     },
-    {  question: "What is the capital of Spain?",
+    {  question: "Cual es la capital de españa",
         options: ["Paris", "Berlin", "Madrid", "Rome"],
         answer: "Madrid"
     },
