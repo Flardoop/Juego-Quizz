@@ -125,6 +125,7 @@ function shuffleArray(array) {
     }
 }
 shuffleArray(quizData);
+
 const questionElement = document.getElementById("question");
 const optionsContainer = document.getElementById("options-container");
 const feedbackElement = document.getElementById("feedback");
@@ -191,22 +192,14 @@ function startTimer() {
     }, 1000);
 }
 
-nextButton.addEventListener("click", () => {
-    if (currentQuestionIndex < quizData.length) {
-        showQuestion();
-        timer = 10;
-        timerElement.textContent = timer;
-        feedbackElement.textContent = "";
-    } else {
-        endQuiz();
-    }
-});
 
 function endQuiz() {
+    let nota = (score * 10) / quizData.length ;
+    nota = nota.toFixed(2);
     questionElement.textContent = "Quiz acabado!";
     optionsContainer.innerHTML = "";
     feedbackElement.textContent = `Tu puntuación final es: ${score}!`;
-    feedbackElement.textContent += 'La nota del quiz es: ' + (score * 10) / quizData.length +'/ 10';
+    feedbackElement.textContent += 'La nota del quiz es: ' + nota+'/ 10';
     feedbackElement.textContent += ` Tu tiempo final es: ${timer} segundos!`;
     timerElement.style.display = "none";
     nextButton.style.display = "none";
