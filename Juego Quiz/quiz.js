@@ -135,7 +135,8 @@ const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
-let timer = 10;
+let timer = 5*quizData.length;
+let timerauxiliar = timer;
 
 function startQuiz() {
     showQuestion();
@@ -200,7 +201,7 @@ function endQuiz() {
     optionsContainer.innerHTML = "";
     feedbackElement.textContent = `Tu puntuación final es: ${score}!`;
     feedbackElement.textContent += 'La nota del quiz es: ' + nota+'/ 10';
-    feedbackElement.textContent += ` Tu tiempo final es: ${timer} segundos!`;
+    feedbackElement.textContent += ' Tu tiempo final es: '+(timerauxiliar - timer)+' segundos!';
     timerElement.style.display = "none";
     nextButton.style.display = "none";
 }
