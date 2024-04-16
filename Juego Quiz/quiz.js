@@ -67,6 +67,31 @@ const quizData = [
         options: ["Paris", "Berlin", "Copenhagen", "Rome"],
         answer: "Copenhagen"
     }
+    {
+        question: "What is the capital of Argentina?",
+        options: ["Buenos Aires", "Santiago", "Lima", "Bogota"],
+        answer: "Buenos Aires"
+    },
+    {
+        question: "What is the capital of Brazil?",
+        options: ["Buenos Aires", "Santiago", "Brasilia", "Bogota"],
+        answer: "Brasilia"
+    },
+    {
+        question: "What is the capital of Colombia?",
+        options: ["Buenos Aires", "Santiago", "Lima", "Bogota"],
+        answer: "Bogota"
+    },
+    {
+        question: "What is the capital of Peru?",
+        options: ["Buenos Aires", "Santiago", "Lima", "Bogota"],
+        answer: "Lima"
+    },
+    {
+        question: "What is the capital of Chile?",
+        options: ["Buenos Aires", "Santiago", "Lima", "Bogota"],
+        answer: "Santiago"
+    }
     // Add more questions here
 ];
 
