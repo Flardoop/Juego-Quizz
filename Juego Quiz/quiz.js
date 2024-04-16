@@ -17,6 +17,56 @@ const quizData = [
         options: ["Paris", "Berlin", "Madrid", "Roma"],
         answer: "Roma"
     },
+    {
+        question: "What is the capital of Germany?",
+        options: ["Paris", "Berlin", "Madrid", "Rome"],
+        answer: "Berlin"
+    },
+    {
+        question: "What is the capital of Spain?",
+        options: ["Paris", "Berlin", "Madrid", "Rome"],
+        answer: "Madrid"
+    },
+    {
+        question: "What is the capital of Italy?",
+        options: ["Paris", "Berlin", "Madrid", "Rome"],
+        answer: "Rome"
+    },
+    {
+        question: "What is the capital of United Kingdom?",
+        options: ["Paris", "Berlin", "London", "Rome"],
+        answer: "London"
+    },
+    {
+        question: "What is the capital of Russia?",
+        options: ["Paris", "Berlin", "Moscow", "Rome"],
+        answer: "Moscow"
+    },
+    {
+        question: "What is the capital of Turkey?",
+        options: ["Paris", "Berlin", "Ankara", "Rome"],
+        answer: "Ankara"
+    },
+    {
+        question: "What is the capital of Greece?",
+        options: ["Paris", "Berlin", "Athens", "Rome"],
+        answer: "Athens"
+    },
+    {
+        question: "What is the capital of Sweden?",
+        options: ["Paris", "Berlin", "Stockholm", "Rome"],
+        answer: "Stockholm"
+    },
+    {
+        question: "What is the capital of Norway?",
+        options: ["Paris", "Berlin", "Oslo", "Rome"],
+        answer: "Oslo"
+    },
+    {
+        question: "What is the capital of Denmark?",
+        options: ["Paris", "Berlin", "Copenhagen", "Rome"],
+        answer: "Copenhagen"
+    }
     // Add more questions here
 ];
 
@@ -68,7 +118,8 @@ function startTimer() {
         if (timer === 0) {
             clearInterval(interval);
             nextButton.disabled = true;
-            feedbackElement.textContent = "Time's up!";
+            feedbackElement.textContent = "Se ha acabado el tiempo!";
+            
         }
     }, 1000);
 }
@@ -85,7 +136,7 @@ nextButton.addEventListener("click", () => {
 });
 
 function endQuiz() {
-    // Display final score and other relevant information
+    
 }
 
 startQuiz();
