@@ -9,6 +9,10 @@ const quizData = [
         options: ["3", "4", "5", "6"],
         answer: "4"
     },
+    {  question: "What is the capital of Spain?",
+        options: ["Paris", "Berlin", "Madrid", "Rome"],
+        answer: "Madrid"
+    },
     // Add more questions here
 ];
 
