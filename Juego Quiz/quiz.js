@@ -118,6 +118,13 @@ const quizData = [
         answer: "Moscú"
     }    // Para añadir preguntas aquí
 ];
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+shuffleArray(quizData);
 const questionElement = document.getElementById("question");
 const optionsContainer = document.getElementById("options-container");
 const feedbackElement = document.getElementById("feedback");
