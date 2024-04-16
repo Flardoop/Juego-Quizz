@@ -199,7 +199,7 @@ function endQuiz() {
     questionElement.textContent = "Quiz acabado!";
     optionsContainer.innerHTML = "";
     feedbackElement.textContent = `Tu puntuación final es: ${score}!`;
-    feedbackElement.textContent = 'La nota del quiz es: ' + (score * 10) / quizData.length + '/10';
+    feedbackElement.textContent += 'La nota del quiz es: ' + (score * 10) / quizData.length +'/ 10';
     feedbackElement.textContent += ` Tu tiempo final es: ${timer} segundos!`;
     timerElement.style.display = "none";
     nextButton.style.display = "none";
