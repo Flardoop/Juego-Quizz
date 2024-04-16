@@ -126,12 +126,21 @@ function shuffleArray(array) {
 }
 shuffleArray(quizData);
 
+let userName;
+
+// Añade esto en tu JavaScript
+document.getElementById('name-submit-btn').addEventListener('click', function() {
+    userName = document.getElementById('name-input').value;
+    document.getElementById('name-input-container').style.display = 'none'; // Oculta el campo de entrada y el botón
+    document.getElementById('start-quiz-btn').style.display = 'block'; // Muestra el botón de inicio del quiz
+});
 const questionElement = document.getElementById("question");
 const optionsContainer = document.getElementById("options-container");
 const feedbackElement = document.getElementById("feedback");
 const scoreElement = document.getElementById("score-value");
 const timerElement = document.getElementById("timer-value");
 const nextButton = document.getElementById("next-btn");
+const notasElement = document.getElementById("mensajenota");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -197,6 +206,15 @@ function startTimer() {
 function endQuiz() {
     let nota = (score * 10) / quizData.length ;
     nota = nota.toFixed(2);
+    if(nota < 5){
+        notasElement.textContent = "Vaya, " + userName + ", has suspendido el quiz!";
+    }else if(nota >= 5 && nota < 7){
+        notasElement.textContent = "Bien, " + userName + ", has aprobado el quiz!";
+    }else if(nota >= 7 && nota < 9){
+        notasElement.textContent = "Muy bien, " + userName + ", has sacado un notable en el quiz!";
+    }else if(nota >= 9 && nota <= 10){
+        notasElement.textContent = "Excelente, " + userName + ", has sacado un sobresaliente en el quiz!";
+    }
     questionElement.textContent = "Quiz acabado!";
     optionsContainer.innerHTML = "";
     feedbackElement.textContent = `Tu puntuación final es: ${score}!`;
@@ -205,5 +223,10 @@ function endQuiz() {
     timerElement.style.display = "none";
     nextButton.style.display = "none";
 }
+// Añade esto en tu JavaScript
 
-startQuiz();
+// Añade esto en tu JavaScript
+document.getElementById('start-quiz-btn').addEventListener('click', function() {
+    document.getElementById('start-quiz-btn').style.display = 'none'; // Oculta el botón de inicio
+    startQuiz(); // Comienza el quiz
+});

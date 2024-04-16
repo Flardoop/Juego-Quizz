@@ -9,12 +9,21 @@
 <body>
     <div class="container">
         <h1>Quiz Game</h1>
+        <!-- Añade esto en tu HTML, dentro del div con la clase "container" -->
+        <div id="name-input-container">
+            <input type="text" id="name-input" placeholder="Ingresa tu nombre">
+            <button id="name-submit-btn">Enviar</button>
+            <!-- Añade esto en tu HTML, dentro del div con la clase "container" -->
+        </div>
+        <!-- Añade esto en tu HTML, dentro del div con la clase "container" -->
+        <button id="start-quiz-btn" style="display: none;">Iniciar Quiz</button>
         <div id="question-container">
             <p id="question"></p>
             <div id="options-container">
                 <!-- Options will be dynamically added here -->
             </div>
         </div>
+        <div id="mensajenota"></div>
         <div id="feedback"></div>
         <button id="next-btn">Siguiente</button>
         <div id="score">Puntuacion: <span id="score-value">0</span></div>
