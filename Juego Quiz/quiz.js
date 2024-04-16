@@ -1,100 +1,123 @@
 const quizData = [
     {
-        question: "What is the capital of France?",
-        options: ["Paris", "Berlin", "Madrid", "Rome"],
-        answer: "Paris"
+        question: "¿Cuál es la capital de Francia?",
+        options: ["París", "Berlín", "Madrid", "Roma"],
+        answer: "París"
     },
     {
-        question: "What is 2 + 2?",
+        question: "¿Cuánto es 2 + 2?",
         options: ["3", "4", "5", "6"],
         answer: "4"
     },
-    {  question: "Cual es la capital de españa",
-        options: ["Paris", "Berlin", "Madrid", "Rome"],
+    {  question: "¿Cuál es la capital de España?",
+        options: ["París", "Berlín", "Madrid", "Roma"],
         answer: "Madrid"
     },
-    {  question: "Cual es la capital de italia",
-        options: ["Paris", "Berlin", "Madrid", "Roma"],
+    {  question: "¿Cuál es la capital de Italia?",
+        options: ["París", "Berlín", "Madrid", "Roma"],
         answer: "Roma"
     },
     {
-        question: "What is the capital of Germany?",
-        options: ["Paris", "Berlin", "Madrid", "Rome"],
-        answer: "Berlin"
+        question: "¿Cuál es la capital de Alemania?",
+        options: ["París", "Berlín", "Madrid", "Roma"],
+        answer: "Berlín"
     },
     {
-        question: "What is the capital of Spain?",
-        options: ["Paris", "Berlin", "Madrid", "Rome"],
+        question: "¿Cuál es la capital de España?",
+        options: ["París", "Berlín", "Madrid", "Roma"],
         answer: "Madrid"
     },
     {
-        question: "What is the capital of Italy?",
-        options: ["Paris", "Berlin", "Madrid", "Rome"],
-        answer: "Rome"
+        question: "¿Cuál es la capital de Italia?",
+        options: ["París", "Berlín", "Madrid", "Roma"],
+        answer: "Roma"
     },
     {
-        question: "What is the capital of United Kingdom?",
-        options: ["Paris", "Berlin", "London", "Rome"],
-        answer: "London"
+        question: "¿Cuál es la capital del Reino Unido?",
+        options: ["París", "Berlín", "Londres", "Roma"],
+        answer: "Londres"
     },
     {
-        question: "What is the capital of Russia?",
-        options: ["Paris", "Berlin", "Moscow", "Rome"],
-        answer: "Moscow"
+        question: "¿Cuál es la capital de Rusia?",
+        options: ["París", "Berlín", "Moscú", "Roma"],
+        answer: "Moscú"
     },
     {
-        question: "What is the capital of Turkey?",
-        options: ["Paris", "Berlin", "Ankara", "Rome"],
+        question: "¿Cuál es la capital de Turquía?",
+        options: ["París", "Berlín", "Ankara", "Roma"],
         answer: "Ankara"
     },
     {
-        question: "What is the capital of Greece?",
-        options: ["Paris", "Berlin", "Athens", "Rome"],
-        answer: "Athens"
+        question: "¿Cuál es la capital de Grecia?",
+        options: ["París", "Berlín", "Atenas", "Roma"],
+        answer: "Atenas"
     },
     {
-        question: "What is the capital of Sweden?",
-        options: ["Paris", "Berlin", "Stockholm", "Rome"],
-        answer: "Stockholm"
+        question: "¿Cuál es la capital de Suecia?",
+        options: ["París", "Berlín", "Estocolmo", "Roma"],
+        answer: "Estocolmo"
     },
     {
-        question: "What is the capital of Norway?",
-        options: ["Paris", "Berlin", "Oslo", "Rome"],
+        question: "¿Cuál es la capital de Noruega?",
+        options: ["París", "Berlín", "Oslo", "Roma"],
         answer: "Oslo"
     },
     {
-        question: "What is the capital of Denmark?",
-        options: ["Paris", "Berlin", "Copenhagen", "Rome"],
-        answer: "Copenhagen"
-    }
+        question: "¿Cuál es la capital de Dinamarca?",
+        options: ["París", "Berlín", "Copenhague", "Roma"],
+        answer: "Copenhague"
+    },
     {
-        question: "What is the capital of Argentina?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogota"],
+        question: "¿Cuál es la capital de Argentina?",
+        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
         answer: "Buenos Aires"
     },
     {
-        question: "What is the capital of Brazil?",
-        options: ["Buenos Aires", "Santiago", "Brasilia", "Bogota"],
+        question: "¿Cuál es la capital de Brasil?",
+        options: ["Buenos Aires", "Santiago", "Brasilia", "Bogotá"],
         answer: "Brasilia"
     },
     {
-        question: "What is the capital of Colombia?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogota"],
-        answer: "Bogota"
+        question: "¿Cuál es la capital de Colombia?",
+        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
+        answer: "Bogotá"
     },
     {
-        question: "What is the capital of Peru?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogota"],
+        question: "¿Cuál es la capital de Perú?",
+        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
         answer: "Lima"
     },
     {
-        question: "What is the capital of Chile?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogota"],
+        question: "¿Cuál es la capital de Chile?",
+        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
         answer: "Santiago"
-    }
-    // Add more questions here
+    },
+    {
+        question: "¿Cuál es la capital de China?",
+        options: ["Pekín", "Tokio", "Seúl", "Shanghái"],
+        answer: "Pekín"
+    },
+    {
+        question: "¿Cuál es la capital de Japón?",
+        options: ["Pekín", "Tokio", "Seúl", "Shanghái"],
+        answer: "Tokio"
+    },
+    {
+        question: "¿Cuál es la capital de Corea del Sur?",
+        options: ["Pekín", "Tokio", "Seúl", "Shanghái"],
+        answer: "Seúl"
+    },
+    {
+        question: "¿Cuál es la capital de India?",
+        options: ["Nueva Delhi", "Mumbai", "Kolkata", "Chennai"],
+        answer: "Nueva Delhi"
+    },
+    {
+        question: "¿Cuál es la capital de Rusia?",
+        options: ["Moscú", "San Petersburgo", "Novosibirsk", "Yekaterimburgo"],
+        answer: "Moscú"
+    }    // Para añadir preguntas aquí
 ];
-
 const questionElement = document.getElementById("question");
 const optionsContainer = document.getElementById("options-container");
 const feedbackElement = document.getElementById("feedback");
