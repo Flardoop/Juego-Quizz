@@ -13,6 +13,10 @@ const quizData = [
         options: ["Paris", "Berlin", "Madrid", "Rome"],
         answer: "Madrid"
     },
+    {  question: "Cual es la capital de italia",
+        options: ["Paris", "Berlin", "Madrid", "Roma"],
+        answer: "Roma"
+    },
     // Add more questions here
 ];
 
