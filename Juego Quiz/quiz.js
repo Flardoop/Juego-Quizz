@@ -163,11 +163,23 @@ function startTimer() {
     const interval = setInterval(() => {
         timer--;
         timerElement.textContent = timer;
-        if (timer === 0) {
+        if (timer === 0 ) {
             clearInterval(interval);
             nextButton.disabled = true;
             feedbackElement.textContent = "Se ha acabado el tiempo!";
-            
+            setTimeout(() => {
+                nextButton.disabled = false;
+                    endQuiz();
+            }, 1000);
+        }
+        if (currentQuestionIndex >= quizData.length) {
+            clearInterval(interval);
+            nextButton.disabled = true;
+            feedbackElement.textContent = "Fin del juego!";
+            setTimeout(() => {
+                nextButton.disabled = false;
+                endQuiz();
+            }, 1000);
         }
     }, 1000);
 }
