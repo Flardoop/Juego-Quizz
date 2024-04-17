@@ -141,6 +141,9 @@ const scoreElement = document.getElementById("score-value");
 const timerElement = document.getElementById("timer-value");
 const nextButton = document.getElementById("next-btn");
 const notasElement = document.getElementById("mensajenota");
+const score2Element = document.getElementById("score");
+const timer2Element = document.getElementById("timer");
+
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -217,11 +220,14 @@ function endQuiz() {
     }
     questionElement.textContent = "Quiz acabado!";
     optionsContainer.innerHTML = "";
-    feedbackElement.textContent = `Tu puntuación final es: ${score}!`;
+    feedbackElement.textContent = `Tu puntuación final es: ${score} de ${quizData.length}!`;
     feedbackElement.textContent += 'La nota del quiz es: ' + nota+'/ 10';
     feedbackElement.textContent += ' Tu tiempo final es: '+(timerauxiliar - timer)+' segundos!';
     timerElement.style.display = "none";
+    scoreElement.style.display = "none";
     nextButton.style.display = "none";
+    score2Element.style.display = "none";
+    timer2Element.style.display = "none";
 }
 // Añade esto en tu JavaScript
 
