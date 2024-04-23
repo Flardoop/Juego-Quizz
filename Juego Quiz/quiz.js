@@ -116,7 +116,32 @@ const quizData = [
         question: "¿Cuál es la capital de Rusia?",
         options: ["Moscú", "San Petersburgo", "Novosibirsk", "Yekaterimburgo"],
         answer: "Moscú"
-    }    // Para añadir preguntas aquí
+    },    // Para añadir preguntas aquí
+    {
+        question: "¿Cuál es la capital de Estados Unidos?",
+        options: ["Washington D.C.", "Nueva York", "Los Ángeles", "Chicago"],
+        answer: "Washington D.C."
+    },
+    {
+        question: "¿Cuál es la capital de Canadá?",
+        options: ["Toronto", "Montreal", "Vancouver", "Ottawa"],
+        answer: "Ottawa"
+    },
+    {
+        question: "¿Cuál es la capital de Australia?",
+        options: ["Sídney", "Melbourne", "Brisbane", "Canberra"],
+        answer: "Canberra"
+    },
+    {
+        question: "¿Cuál es la capital de México?",
+        options: ["Ciudad de México", "Guadalajara", "Monterrey", "Puebla"],
+        answer: "Ciudad de México"
+    },
+    {
+        question: "¿Cuál es la capital de Sudáfrica?",
+        options: ["Ciudad del Cabo", "Johannesburgo", "Pretoria", "Durban"],
+        answer: "Pretoria"
+    }
 ];
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
