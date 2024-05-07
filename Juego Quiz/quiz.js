@@ -208,6 +208,8 @@ function endQuiz() {
 
 document.getElementById('start-quiz-btn').addEventListener('click', function() {
     document.getElementById('start-quiz-btn').style.display = 'none'; // Oculta el botón de inicio
+    document.getElementById('score').style.display = 'block';
     document.getElementById('timer').style.display = 'block';
+    document.getElementById('next-btn').style.display = 'block';
     startQuiz(); 
 });
