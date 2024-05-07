@@ -84,7 +84,6 @@ const quizData = [
         options: ["Proxima Centauri", "Sirius", "Alfa Centauri", "Vega"],
         answer: "Proxima Centauri"
     },
-   
 ];
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -145,7 +144,12 @@ function checkAnswer(selectedOption) {
     }
     scoreElement.textContent = score;
     currentQuestionIndex++;
-    showQuestion();
+
+    if (currentQuestionIndex++ > quizData.length) {
+        endQuiz();
+    } else {
+        showQuestion();
+    }
 } 
 
 function startTimer() {
@@ -197,6 +201,14 @@ function endQuiz() {
     score2Element.style.display = "none";
     timer2Element.style.display = "none";
 }
+
+function endQuiz() {
+    // Resto del código...
+
+    // Redirigir al usuario a la página de perfil del jugador
+    window.location.href = 'perfilJugador.html';
+}
+
 // Añade esto en tu JavaScript
 
 // Añade esto en tu JavaScript
