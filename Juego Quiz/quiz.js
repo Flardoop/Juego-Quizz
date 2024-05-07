@@ -203,9 +203,6 @@ function endQuiz() {
 }
 
 function endQuiz() {
-    // Resto del código...
-
-    // Redirigir al usuario a la página de perfil del jugador
     window.location.href = 'perfilJugador.html';
 }
 
