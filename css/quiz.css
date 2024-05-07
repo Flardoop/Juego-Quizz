@@ -20,7 +20,9 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: green;
+    background-color: #a0f4fa;
+    border: 5px solid black;
+    box-shadow: 10px 10px ;
     height: 60vh;
 }
 
