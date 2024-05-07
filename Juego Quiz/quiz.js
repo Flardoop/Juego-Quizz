@@ -9,139 +9,52 @@ const quizData = [
         options: ["3", "4", "5", "6"],
         answer: "4"
     },
-    {  question: "¿Cuál es la capital de España?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
-        answer: "Madrid"
+    {
+        question: "¿Cuánto es 5 * 3?",
+        options: ["10", "15", "20", "25"],
+        answer: "15"
     },
-    {  question: "¿Cuál es la capital de Italia?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
+    {
+        question: "¿Cuánto es 10 / 2?",
+        options: ["3", "4", "5", "6"],
+        answer: "5"
+    },
+    {
+        question: "¿Cuánto es 8 - 3?",
+        options: ["3", "4", "5", "6"],
+        answer: "5"
+    },
+    {
+        question: "¿Cuánto es 7 + 9?",
+        options: ["14", "15", "16", "17"],
+        answer: "16"
+    },
+    {
+        question: "¿En qué año se descubrió América?",
+        options: ["1492", "1500", "1520", "1550"],
+        answer: "1492"
+    },
+    {
+        question: "¿Quién fue el primer presidente de Estados Unidos?",
+        options: ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "John Adams"],
+        answer: "George Washington"
+    },
+    {
+        question: "¿Cuál fue la capital del Imperio Romano?",
+        options: ["Roma", "Atenas", "Cartago", "Constantinopla"],
         answer: "Roma"
     },
     {
-        question: "¿Cuál es la capital de Alemania?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
-        answer: "Berlín"
+        question: "¿En qué año comenzó la Primera Guerra Mundial?",
+        options: ["1914", "1916", "1918", "1920"],
+        answer: "1914"
     },
     {
-        question: "¿Cuál es la capital de España?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
-        answer: "Madrid"
+        question: "¿Quién fue el líder de la Revolución Rusa?",
+        options: ["Vladimir Lenin", "Joseph Stalin", "Leon Trotsky", "Mikhail Gorbachev"],
+        answer: "Vladimir Lenin"
     },
-    {
-        question: "¿Cuál es la capital de Italia?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
-        answer: "Roma"
-    },
-    {
-        question: "¿Cuál es la capital del Reino Unido?",
-        options: ["París", "Berlín", "Londres", "Roma"],
-        answer: "Londres"
-    },
-    {
-        question: "¿Cuál es la capital de Rusia?",
-        options: ["París", "Berlín", "Moscú", "Roma"],
-        answer: "Moscú"
-    },
-    {
-        question: "¿Cuál es la capital de Turquía?",
-        options: ["París", "Berlín", "Ankara", "Roma"],
-        answer: "Ankara"
-    },
-    {
-        question: "¿Cuál es la capital de Grecia?",
-        options: ["París", "Berlín", "Atenas", "Roma"],
-        answer: "Atenas"
-    },
-    {
-        question: "¿Cuál es la capital de Suecia?",
-        options: ["París", "Berlín", "Estocolmo", "Roma"],
-        answer: "Estocolmo"
-    },
-    {
-        question: "¿Cuál es la capital de Noruega?",
-        options: ["París", "Berlín", "Oslo", "Roma"],
-        answer: "Oslo"
-    },
-    {
-        question: "¿Cuál es la capital de Dinamarca?",
-        options: ["París", "Berlín", "Copenhague", "Roma"],
-        answer: "Copenhague"
-    },
-    {
-        question: "¿Cuál es la capital de Argentina?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
-        answer: "Buenos Aires"
-    },
-    {
-        question: "¿Cuál es la capital de Brasil?",
-        options: ["Buenos Aires", "Santiago", "Brasilia", "Bogotá"],
-        answer: "Brasilia"
-    },
-    {
-        question: "¿Cuál es la capital de Colombia?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
-        answer: "Bogotá"
-    },
-    {
-        question: "¿Cuál es la capital de Perú?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
-        answer: "Lima"
-    },
-    {
-        question: "¿Cuál es la capital de Chile?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
-        answer: "Santiago"
-    },
-    {
-        question: "¿Cuál es la capital de China?",
-        options: ["Pekín", "Tokio", "Seúl", "Shanghái"],
-        answer: "Pekín"
-    },
-    {
-        question: "¿Cuál es la capital de Japón?",
-        options: ["Pekín", "Tokio", "Seúl", "Shanghái"],
-        answer: "Tokio"
-    },
-    {
-        question: "¿Cuál es la capital de Corea del Sur?",
-        options: ["Pekín", "Tokio", "Seúl", "Shanghái"],
-        answer: "Seúl"
-    },
-    {
-        question: "¿Cuál es la capital de India?",
-        options: ["Nueva Delhi", "Mumbai", "Kolkata", "Chennai"],
-        answer: "Nueva Delhi"
-    },
-    {
-        question: "¿Cuál es la capital de Rusia?",
-        options: ["Moscú", "San Petersburgo", "Novosibirsk", "Yekaterimburgo"],
-        answer: "Moscú"
-    },    // Para añadir preguntas aquí
-    {
-        question: "¿Cuál es la capital de Estados Unidos?",
-        options: ["Washington D.C.", "Nueva York", "Los Ángeles", "Chicago"],
-        answer: "Washington D.C."
-    },
-    {
-        question: "¿Cuál es la capital de Canadá?",
-        options: ["Toronto", "Montreal", "Vancouver", "Ottawa"],
-        answer: "Ottawa"
-    },
-    {
-        question: "¿Cuál es la capital de Australia?",
-        options: ["Sídney", "Melbourne", "Brisbane", "Canberra"],
-        answer: "Canberra"
-    },
-    {
-        question: "¿Cuál es la capital de México?",
-        options: ["Ciudad de México", "Guadalajara", "Monterrey", "Puebla"],
-        answer: "Ciudad de México"
-    },
-    {
-        question: "¿Cuál es la capital de Sudáfrica?",
-        options: ["Ciudad del Cabo", "Johannesburgo", "Pretoria", "Durban"],
-        answer: "Pretoria"
-    }
+   
 ];
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
