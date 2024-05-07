@@ -206,10 +206,7 @@ function endQuiz() {
     window.location.href = 'perfilJugador.html';
 }
 
-// Añade esto en tu JavaScript
-
-// Añade esto en tu JavaScript
 document.getElementById('start-quiz-btn').addEventListener('click', function() {
     document.getElementById('start-quiz-btn').style.display = 'none'; // Oculta el botón de inicio
-    startQuiz(); // Comienza el quiz
+    startQuiz(); 
 });
