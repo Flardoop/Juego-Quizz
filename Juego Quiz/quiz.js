@@ -69,6 +69,11 @@ const quizData = [
         options: ["Tigre", "Oso", "León", "Jaguar"],
         answer: "León"
     },
+    {
+        question: "¿Cuántos planetas hay en nuestro sistema solar?",
+        options: ["7", "8", "9", "10"],
+        answer: "8"
+    },
    
 ];
 function shuffleArray(array) {
