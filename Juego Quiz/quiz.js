@@ -64,6 +64,11 @@ const quizData = [
         options: ["Cheetah", "Guepardo", "León", "Leopardo"],
         answer: "Guepardo"
     },
+    {
+        question: "¿Qué animal es conocido como 'el rey de la selva'?",
+        options: ["Tigre", "Oso", "León", "Jaguar"],
+        answer: "León"
+    },
    
 ];
 function shuffleArray(array) {
