@@ -74,6 +74,11 @@ const quizData = [
         options: ["7", "8", "9", "10"],
         answer: "8"
     },
+    {
+        question: "¿Cuál es el planeta más grande del sistema solar?",
+        options: ["Tierra", "Marte", "Júpiter", "Saturno"],
+        answer: "Júpiter"
+    },
    
 ];
 function shuffleArray(array) {
