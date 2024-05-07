@@ -29,7 +29,14 @@
         <button id="next-btn">Siguiente</button>
         <div id="score">Puntuacion: <span id="score-value">0</span></div>
         <div id="timer">Tiempo Siguiente: <span id="timer-value">10</span> seconds</div>
+        <!-- Nuevo botón para redirigir al perfil del jugador -->
+        <button id="view-profile-btn">Ver Perfil</button>
     </div>
     <script src="quiz.js"></script>
+    <script>
+        document.getElementById('view-profile-btn').addEventListener('click', function() {
+            window.location.href = 'perfilJugador.html';
+        });
+    </script>
 </body>
 </html>
