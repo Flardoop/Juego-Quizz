@@ -59,6 +59,11 @@ const quizData = [
         options: ["Elefante", "Ballena Azul", "Jirafa", "Tiburón Ballena"],
         answer: "Ballena Azul"
     },
+    {
+        question: "¿Cuál es el animal más rápido del mundo?",
+        options: ["Cheetah", "Guepardo", "León", "Leopardo"],
+        answer: "Guepardo"
+    },
    
 ];
 function shuffleArray(array) {
