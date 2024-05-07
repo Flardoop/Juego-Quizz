@@ -137,10 +137,10 @@ function showQuestion() {
 function checkAnswer(selectedOption) {
     const currentQuestion = quizData[currentQuestionIndex];
     if (selectedOption === currentQuestion.answer) {
-        feedbackElement.textContent = "Correct!";
+        feedbackElement.textContent = "Correcto!";
         score++;
     } else {
-        feedbackElement.textContent = "Wrong!";
+        feedbackElement.textContent = "Incorrecto!";
     }
     scoreElement.textContent = score;
     currentQuestionIndex++;
@@ -208,5 +208,6 @@ function endQuiz() {
 
 document.getElementById('start-quiz-btn').addEventListener('click', function() {
     document.getElementById('start-quiz-btn').style.display = 'none'; // Oculta el botón de inicio
+    document.getElementById('timer').style.display = 'block';
     startQuiz(); 
 });
