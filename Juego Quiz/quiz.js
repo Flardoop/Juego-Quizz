@@ -136,7 +136,7 @@ function checkAnswer(selectedOption) {
     scoreElement.textContent = score;
     currentQuestionIndex++;
     showQuestion();
-}
+} 
 
 function startTimer() {
     const interval = setInterval(() => {
