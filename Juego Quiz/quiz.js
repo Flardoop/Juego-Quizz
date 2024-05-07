@@ -79,6 +79,11 @@ const quizData = [
         options: ["Tierra", "Marte", "Júpiter", "Saturno"],
         answer: "Júpiter"
     },
+    {
+        question: "¿Cuál es la estrella más cercana a la Tierra?",
+        options: ["Proxima Centauri", "Sirius", "Alfa Centauri", "Vega"],
+        answer: "Proxima Centauri"
+    },
    
 ];
 function shuffleArray(array) {
