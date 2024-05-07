@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de Preguntas</title>
-    <link rel="stylesheet" href="quiz.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -13,37 +12,25 @@
     <link rel="icon" href="../img/favicon.png" type="image/x-icon">
 
 </head>
-<body>
 <body class="montserrat">
     <div class="container">
-        <h1>Quiz Game</h1>
-        <!-- Añade esto en tu HTML, dentro del div con la clase "container" -->
+        <h1 id="input-tittle">Quiz Game</h1>
         <div id="name-input-container">
             <input type="text" id="name-input" class="form-control mb-3" placeholder="Ingresa tu nombre">
             <button id="name-submit-btn">Enviar</button>
-            <!-- Añade esto en tu HTML, dentro del div con la clase "container" -->
         </div>
-        <!-- Añade esto en tu HTML, dentro del div con la clase "container" -->
         <button id="start-quiz-btn" style="display: none;">Iniciar Quiz</button>
         <div id="question-container">
             <p id="question"></p>
             <div id="options-container">
-                <!-- Options will be dynamically added here -->
             </div>
         </div>
         <div id="mensajenota"></div>
         <div id="feedback"></div>
-        <button id="next-btn">Siguiente</button>
-        <div id="score">Puntuacion: <span id="score-value">0</span></div>
-        <div id="timer">Tiempo Siguiente: <span id="timer-value">10</span> seconds</div>
-        <!-- Nuevo botón para redirigir al perfil del jugador -->
-        <button id="view-profile-btn">Ver Perfil</button>
+        <button id="next-btn" hidden>Siguiente</button>
+        <div id="score" hidden>Puntuacion: <span id="score-value">0</span></div>
+        <div id="timer" hidden>Tiempo Siguiente: <span id="timer-value">10</span> seconds</div>
     </div>
     <script src="quiz.js"></script>
-    <script>
-        document.getElementById('view-profile-btn').addEventListener('click', function() {
-            window.location.href = 'perfilJugador.html';
-        });
-    </script>
 </body>
 </html>
