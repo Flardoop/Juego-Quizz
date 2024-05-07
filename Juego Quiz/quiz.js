@@ -54,6 +54,11 @@ const quizData = [
         options: ["Vladimir Lenin", "Joseph Stalin", "Leon Trotsky", "Mikhail Gorbachev"],
         answer: "Vladimir Lenin"
     },
+    {
+        question: "¿Cuál es el animal más grande del mundo?",
+        options: ["Elefante", "Ballena Azul", "Jirafa", "Tiburón Ballena"],
+        answer: "Ballena Azul"
+    },
    
 ];
 function shuffleArray(array) {
