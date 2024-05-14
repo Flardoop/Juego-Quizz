@@ -7,14 +7,55 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        .btn-music {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
     <link rel="stylesheet" href="/css/quiz.css">
     <link rel="icon" href="/img/favicon.png" type="image/x-icon">
-
 </head>
 <body class="montserrat">
     <div class="container">
         <h1 id="input-tittle">Quiz Game</h1>
+        <audio id="background-music" loop>
+            <source src="songs/kh.mp3" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+
+        <button id="mute-music-btn" class="btn-music">Silenciar Música</button>
+    
+        <script>
+            window.onload = function() {
+                var audio = document.getElementById('background-music');
+                var muteButton = document.getElementById('mute-music-btn');
+                audio.volume = 0.5;  // Ajusta el volumen (0.0 a 1.0)
+
+                // Intenta reproducir el audio automáticamente
+                audio.play().catch(function(error) {
+                    console.log('Reproducción automática impedida. El usuario debe interactuar con la página.');
+                });
+
+                // Función para silenciar y reactivar la música
+                muteButton.onclick = function() {
+                    if (audio.muted) {
+                        audio.muted = false;
+                        muteButton.innerHTML = 'Silenciar Música';
+                    } else {
+                        audio.muted = true;
+                        muteButton.innerHTML = 'Reactivar Música';
+                    }
+                };
+            };
+        </script>
+
         <div id="name-input-container">
             <input type="text" id="name-input" class="form-control mb-3" placeholder="Ingresa tu nombre">
             <button id="name-submit-btn">Enviar</button>
@@ -23,8 +64,7 @@
         <div id="question-container">
             <p id="question"></p>
             <div id="options-container">
-                
-            </div>
+                <!-- Opciones del quiz -->
             </div>
         </div>
         <div id="mensajenota"></div>
