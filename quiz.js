@@ -143,39 +143,41 @@ const quizData = [
         answer: "Pretoria"
     }
 ];
+
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
 shuffleArray(quizData);
 
 let userName;
-
-// Añade esto en tu JavaScript
 document.getElementById('name-submit-btn').addEventListener('click', function() {
     userName = document.getElementById('name-input').value;
-    document.getElementById('name-input-container').style.display = 'none'; // Oculta el campo de entrada y el botón
-    document.getElementById('start-quiz-btn').style.display = 'block'; // Muestra el botón de inicio del quiz
+    document.getElementById('name-input-container').style.display = 'none';
+    document.getElementById('start-quiz-btn').style.display = 'block';
 });
 const questionElement = document.getElementById("question");
 const optionsContainer = document.getElementById("options-container");
 const feedbackElement = document.getElementById("feedback");
 const scoreElement = document.getElementById("score-value");
 const timerElement = document.getElementById("timer-value");
-const nextButton = document.getElementById("next-btn");
 const notasElement = document.getElementById("mensajenota");
 const score2Element = document.getElementById("score");
 const timer2Element = document.getElementById("timer");
 
-
 let currentQuestionIndex = 0;
 let score = 0;
-let timer = 5*quizData.length;
-let timerauxiliar = timer;
+let timer;
+let interval;
 
 function startQuiz() {
+    document.getElementById("question-container").style.display = 'block';
+    document.getElementById("score").style.display = 'block';
+    document.getElementById("timer").style.display = 'block';
     showQuestion();
     startTimer();
 }
@@ -187,6 +189,7 @@ function showQuestion() {
     currentQuestion.options.forEach(option => {
         const button = document.createElement("button");
         button.textContent = option;
+        button.classList.add('btn', 'btn-outline-primary', 'mb-2');
         button.addEventListener("click", () => checkAnswer(option));
         optionsContainer.appendChild(button);
     });
@@ -203,62 +206,54 @@ function checkAnswer(selectedOption) {
     scoreElement.textContent = score;
     currentQuestionIndex++;
 
-    if (currentQuestionIndex++ > quizData.length) {
-        endQuiz();
-    } else {
+    if (currentQuestionIndex < quizData.length) {
         showQuestion();
+    } else {
+        endQuiz();
     }
 } 
 
 function startTimer() {
-    const interval = setInterval(() => {
+    timer = quizData.length * 10;
+    interval = setInterval(() => {
         timer--;
         timerElement.textContent = timer;
-        if (timer === 0 ) {
+        if (timer <= 0) {
             clearInterval(interval);
-            nextButton.disabled = true;
-            feedbackElement.textContent = "Se ha acabado el tiempo!";
-            setTimeout(() => {
-                nextButton.disabled = false;
-                    endQuiz();
-            }, 1000);
-        }
-        if (currentQuestionIndex >= quizData.length) {
-            clearInterval(interval);
-            nextButton.disabled = true;
-            feedbackElement.textContent = "Fin del juego!";
-            setTimeout(() => {
-                nextButton.disabled = false;
-                endQuiz();
-            }, 1000);
+            endQuiz();
         }
     }, 1000);
 }
 
 
 function endQuiz() {
-    let nota = (score * 10) / quizData.length ;
+    clearInterval(interval);
+    let nota = (score * 10) / quizData.length;
     nota = nota.toFixed(2);
-    if(nota < 5){
+    if (nota < 5) {
         notasElement.textContent = "Vaya, " + userName + ", has suspendido el quiz!";
-    }else if(nota >= 5 && nota < 7){
+    } else if (nota >= 5 && nota < 7) {
         notasElement.textContent = "Bien, " + userName + ", has aprobado el quiz!";
-    }else if(nota >= 7 && nota < 9){
+    } else if (nota >= 7 && nota < 9) {
         notasElement.textContent = "Muy bien, " + userName + ", has sacado un notable en el quiz!";
-    }else if(nota >= 9 && nota <= 10){
+    } else if (nota >= 9 && nota <= 10) {
         notasElement.textContent = "Excelente, " + userName + ", has sacado un sobresaliente en el quiz!";
     }
     questionElement.textContent = "Quiz acabado!";
     optionsContainer.innerHTML = "";
     feedbackElement.textContent = `Tu puntuación final es: ${score} de ${quizData.length}!`;
-    feedbackElement.textContent += 'La nota del quiz es: ' + nota+'/ 10';
-    feedbackElement.textContent += ' Tu tiempo final es: '+(timerauxiliar - timer)+' segundos!';
+    feedbackElement.textContent += ` La nota del quiz es: ${nota}/10.`;
+    feedbackElement.textContent += ` Tu tiempo final es: ${quizData.length * 10 - timer} segundos!`;
     timerElement.style.display = "none";
     scoreElement.style.display = "none";
-    nextButton.style.display = "none";
     score2Element.style.display = "none";
     timer2Element.style.display = "none";
 }
+
+document.getElementById('start-quiz-btn').addEventListener('click', function() {
+    document.getElementById('start-quiz-btn').style.display = 'none';
+    startQuiz();
+});
 
 function endQuiz() {
     window.location.href = 'perfilJugador.html';

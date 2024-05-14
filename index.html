@@ -58,19 +58,17 @@
 
         <div id="name-input-container">
             <input type="text" id="name-input" class="form-control mb-3" placeholder="Ingresa tu nombre">
-            <button id="name-submit-btn">Enviar</button>
+            <button id="name-submit-btn" class="btn btn-primary">Enviar</button>
         </div>
-        <button id="start-quiz-btn" style="display: none;">Iniciar Quiz</button>
-        <div id="question-container">
+        <button id="start-quiz-btn" class="btn btn-success" style="display: none;">Iniciar Quiz</button>
+        <div id="question-container" style="display: none;">
             <p id="question"></p>
-            <div id="options-container">
-                <!-- Opciones del quiz -->
-            </div>
+            <div id="options-container" class="btn-group-vertical"></div>
         </div>
-        <div id="mensajenota"></div>
-        <div id="feedback"></div>
-        <div id="score" style="display: none;">Puntuacion: <span id="score-value">0</span></div>
-        <div id="timer" style="display: none;">Tiempo Siguiente: <span id="timer-value">10</span> seconds</div>
+        <div id="mensajenota" class="mt-3"></div>
+        <div id="feedback" class="mt-3"></div>
+        <div id="score" class="mt-3" style="display: none;">Puntuación: <span id="score-value">0</span></div>
+        <div id="timer" class="mt-3" style="display: none;">Tiempo restante: <span id="timer-value">10</span> segundos</div>
     </div>
     <script src="quiz.js"></script>
 </body>
