@@ -195,15 +195,20 @@ function showQuestion() {
 function checkAnswer(selectedOption) {
     const currentQuestion = quizData[currentQuestionIndex];
     if (selectedOption === currentQuestion.answer) {
-        feedbackElement.textContent = "Correct!";
+        feedbackElement.textContent = "Correcto!";
         score++;
     } else {
-        feedbackElement.textContent = "Wrong!";
+        feedbackElement.textContent = "Incorrecto!";
     }
     scoreElement.textContent = score;
     currentQuestionIndex++;
-    showQuestion();
-}
+
+    if (currentQuestionIndex++ > quizData.length) {
+        endQuiz();
+    } else {
+        showQuestion();
+    }
+} 
 
 function startTimer() {
     const interval = setInterval(() => {
@@ -254,10 +259,15 @@ function endQuiz() {
     score2Element.style.display = "none";
     timer2Element.style.display = "none";
 }
-// Añade esto en tu JavaScript
 
-// Añade esto en tu JavaScript
+function endQuiz() {
+    window.location.href = 'perfilJugador.html';
+}
+
 document.getElementById('start-quiz-btn').addEventListener('click', function() {
     document.getElementById('start-quiz-btn').style.display = 'none'; // Oculta el botón de inicio
-    startQuiz(); // Comienza el quiz
+    document.getElementById('score').style.display = 'block';
+    document.getElementById('timer').style.display = 'block';
+    document.getElementById('next-btn').style.display = 'block';
+    startQuiz(); 
 });
