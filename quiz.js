@@ -1,149 +1,31 @@
 const quizData = [
-    {
-        question: "¿Cuál es la capital de Francia?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
-        answer: "París"
-    },
-    {
-        question: "¿Cuánto es 2 + 2?",
-        options: ["3", "4", "5", "6"],
-        answer: "4"
-    },
-    {  question: "¿Cuál es la capital de España?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
-        answer: "Madrid"
-    },
-    {  question: "¿Cuál es la capital de Italia?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
-        answer: "Roma"
-    },
-    {
-        question: "¿Cuál es la capital de Alemania?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
-        answer: "Berlín"
-    },
-    {
-        question: "¿Cuál es la capital de España?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
-        answer: "Madrid"
-    },
-    {
-        question: "¿Cuál es la capital de Italia?",
-        options: ["París", "Berlín", "Madrid", "Roma"],
-        answer: "Roma"
-    },
-    {
-        question: "¿Cuál es la capital del Reino Unido?",
-        options: ["París", "Berlín", "Londres", "Roma"],
-        answer: "Londres"
-    },
-    {
-        question: "¿Cuál es la capital de Rusia?",
-        options: ["París", "Berlín", "Moscú", "Roma"],
-        answer: "Moscú"
-    },
-    {
-        question: "¿Cuál es la capital de Turquía?",
-        options: ["París", "Berlín", "Ankara", "Roma"],
-        answer: "Ankara"
-    },
-    {
-        question: "¿Cuál es la capital de Grecia?",
-        options: ["París", "Berlín", "Atenas", "Roma"],
-        answer: "Atenas"
-    },
-    {
-        question: "¿Cuál es la capital de Suecia?",
-        options: ["París", "Berlín", "Estocolmo", "Roma"],
-        answer: "Estocolmo"
-    },
-    {
-        question: "¿Cuál es la capital de Noruega?",
-        options: ["París", "Berlín", "Oslo", "Roma"],
-        answer: "Oslo"
-    },
-    {
-        question: "¿Cuál es la capital de Dinamarca?",
-        options: ["París", "Berlín", "Copenhague", "Roma"],
-        answer: "Copenhague"
-    },
-    {
-        question: "¿Cuál es la capital de Argentina?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
-        answer: "Buenos Aires"
-    },
-    {
-        question: "¿Cuál es la capital de Brasil?",
-        options: ["Buenos Aires", "Santiago", "Brasilia", "Bogotá"],
-        answer: "Brasilia"
-    },
-    {
-        question: "¿Cuál es la capital de Colombia?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
-        answer: "Bogotá"
-    },
-    {
-        question: "¿Cuál es la capital de Perú?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
-        answer: "Lima"
-    },
-    {
-        question: "¿Cuál es la capital de Chile?",
-        options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"],
-        answer: "Santiago"
-    },
-    {
-        question: "¿Cuál es la capital de China?",
-        options: ["Pekín", "Tokio", "Seúl", "Shanghái"],
-        answer: "Pekín"
-    },
-    {
-        question: "¿Cuál es la capital de Japón?",
-        options: ["Pekín", "Tokio", "Seúl", "Shanghái"],
-        answer: "Tokio"
-    },
-    {
-        question: "¿Cuál es la capital de Corea del Sur?",
-        options: ["Pekín", "Tokio", "Seúl", "Shanghái"],
-        answer: "Seúl"
-    },
-    {
-        question: "¿Cuál es la capital de India?",
-        options: ["Nueva Delhi", "Mumbai", "Kolkata", "Chennai"],
-        answer: "Nueva Delhi"
-    },
-    {
-        question: "¿Cuál es la capital de Rusia?",
-        options: ["Moscú", "San Petersburgo", "Novosibirsk", "Yekaterimburgo"],
-        answer: "Moscú"
-    },    // Para añadir preguntas aquí
-    {
-        question: "¿Cuál es la capital de Estados Unidos?",
-        options: ["Washington D.C.", "Nueva York", "Los Ángeles", "Chicago"],
-        answer: "Washington D.C."
-    },
-    {
-        question: "¿Cuál es la capital de Canadá?",
-        options: ["Toronto", "Montreal", "Vancouver", "Ottawa"],
-        answer: "Ottawa"
-    },
-    {
-        question: "¿Cuál es la capital de Australia?",
-        options: ["Sídney", "Melbourne", "Brisbane", "Canberra"],
-        answer: "Canberra"
-    },
-    {
-        question: "¿Cuál es la capital de México?",
-        options: ["Ciudad de México", "Guadalajara", "Monterrey", "Puebla"],
-        answer: "Ciudad de México"
-    },
-    {
-        question: "¿Cuál es la capital de Sudáfrica?",
-        options: ["Ciudad del Cabo", "Johannesburgo", "Pretoria", "Durban"],
-        answer: "Pretoria"
-    }
+    { question: "¿Cuál es la capital de Francia?", options: ["París", "Berlín", "Madrid", "Roma"], answer: "París" },
+    { question: "¿Cuánto es 2 + 2?", options: ["3", "4", "5", "6"], answer: "4" },
+    { question: "¿Cuál es la capital de España?", options: ["París", "Berlín", "Madrid", "Roma"], answer: "Madrid" },
+    { question: "¿Cuál es la capital de Italia?", options: ["París", "Berlín", "Madrid", "Roma"], answer: "Roma" },
+    { question: "¿Cuál es la capital de Alemania?", options: ["París", "Berlín", "Madrid", "Roma"], answer: "Berlín" },
+    { question: "¿Cuál es la capital del Reino Unido?", options: ["París", "Berlín", "Londres", "Roma"], answer: "Londres" },
+    { question: "¿Cuál es la capital de Rusia?", options: ["París", "Berlín", "Moscú", "Roma"], answer: "Moscú" },
+    { question: "¿Cuál es la capital de Turquía?", options: ["París", "Berlín", "Ankara", "Roma"], answer: "Ankara" },
+    { question: "¿Cuál es la capital de Grecia?", options: ["París", "Berlín", "Atenas", "Roma"], answer: "Atenas" },
+    { question: "¿Cuál es la capital de Suecia?", options: ["París", "Berlín", "Estocolmo", "Roma"], answer: "Estocolmo" },
+    { question: "¿Cuál es la capital de Noruega?", options: ["París", "Berlín", "Oslo", "Roma"], answer: "Oslo" },
+    { question: "¿Cuál es la capital de Dinamarca?", options: ["París", "Berlín", "Copenhague", "Roma"], answer: "Copenhague" },
+    { question: "¿Cuál es la capital de Argentina?", options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"], answer: "Buenos Aires" },
+    { question: "¿Cuál es la capital de Brasil?", options: ["Buenos Aires", "Santiago", "Brasilia", "Bogotá"], answer: "Brasilia" },
+    { question: "¿Cuál es la capital de Colombia?", options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"], answer: "Bogotá" },
+    { question: "¿Cuál es la capital de Perú?", options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"], answer: "Lima" },
+    { question: "¿Cuál es la capital de Chile?", options: ["Buenos Aires", "Santiago", "Lima", "Bogotá"], answer: "Santiago" },
+    { question: "¿Cuál es la capital de China?", options: ["Pekín", "Tokio", "Seúl", "Shanghái"], answer: "Pekín" },
+    { question: "¿Cuál es la capital de Japón?", options: ["Pekín", "Tokio", "Seúl", "Shanghái"], answer: "Tokio" },
+    { question: "¿Cuál es la capital de Corea del Sur?", options: ["Pekín", "Tokio", "Seúl", "Shanghái"], answer: "Seúl" },
+    { question: "¿Cuál es la capital de India?", options: ["Nueva Delhi", "Mumbai", "Kolkata", "Chennai"], answer: "Nueva Delhi" },
+    { question: "¿Cuál es la capital de Estados Unidos?", options: ["Washington D.C.", "Nueva York", "Los Ángeles", "Chicago"], answer: "Washington D.C." },
+    { question: "¿Cuál es la capital de Canadá?", options: ["Toronto", "Montreal", "Vancouver", "Ottawa"], answer: "Ottawa" },
+    { question: "¿Cuál es la capital de Australia?", options: ["Sídney", "Melbourne", "Brisbane", "Canberra"], answer: "Canberra" },
+    { question: "¿Cuál es la capital de México?", options: ["Ciudad de México", "Guadalajara", "Monterrey", "Puebla"], answer: "Ciudad de México" },
+    { question: "¿Cuál es la capital de Sudáfrica?", options: ["Ciudad del Cabo", "Johannesburgo", "Pretoria", "Durban"], answer: "Pretoria" }
 ];
-
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -160,6 +42,7 @@ document.getElementById('name-submit-btn').addEventListener('click', function() 
     document.getElementById('name-input-container').style.display = 'none';
     document.getElementById('start-quiz-btn').style.display = 'block';
 });
+
 const questionElement = document.getElementById("question");
 const optionsContainer = document.getElementById("options-container");
 const feedbackElement = document.getElementById("feedback");
@@ -173,6 +56,11 @@ let currentQuestionIndex = 0;
 let score = 0;
 let timer;
 let interval;
+
+document.getElementById('start-quiz-btn').addEventListener('click', function() {
+    document.getElementById('start-quiz-btn').style.display = 'none';
+    startQuiz();
+});
 
 function startQuiz() {
     document.getElementById("question-container").style.display = 'block';
@@ -198,10 +86,10 @@ function showQuestion() {
 function checkAnswer(selectedOption) {
     const currentQuestion = quizData[currentQuestionIndex];
     if (selectedOption === currentQuestion.answer) {
-        feedbackElement.textContent = "Correcto!";
+        feedbackElement.textContent = "¡Correcto!";
         score++;
     } else {
-        feedbackElement.textContent = "Incorrecto!";
+        feedbackElement.textContent = "¡Incorrecto!";
     }
     scoreElement.textContent = score;
     currentQuestionIndex++;
@@ -211,7 +99,7 @@ function checkAnswer(selectedOption) {
     } else {
         endQuiz();
     }
-} 
+}
 
 function startTimer() {
     timer = quizData.length * 10;
@@ -225,44 +113,32 @@ function startTimer() {
     }, 1000);
 }
 
-
 function endQuiz() {
     clearInterval(interval);
     let nota = (score * 10) / quizData.length;
     nota = nota.toFixed(2);
+    let message;
+
     if (nota < 5) {
-        notasElement.textContent = "Vaya, " + userName + ", has suspendido el quiz!";
+        message = `Vaya, ${userName}, ¡has suspendido el quiz!`;
     } else if (nota >= 5 && nota < 7) {
-        notasElement.textContent = "Bien, " + userName + ", has aprobado el quiz!";
+        message = `Bien, ${userName}, ¡has aprobado el quiz!`;
     } else if (nota >= 7 && nota < 9) {
-        notasElement.textContent = "Muy bien, " + userName + ", has sacado un notable en el quiz!";
+        message = `Muy bien, ${userName}, ¡has sacado un notable en el quiz!`;
     } else if (nota >= 9 && nota <= 10) {
-        notasElement.textContent = "Excelente, " + userName + ", has sacado un sobresaliente en el quiz!";
+        message = `¡Excelente, ${userName}, has sacado un sobresaliente en el quiz!`;
     }
+
+    notasElement.textContent = message;
+    feedbackElement.textContent = `Tu puntuación final es: ${score} de ${quizData.length}! La nota del quiz es: ${nota}/10. Tu tiempo final es: ${quizData.length * 10 - timer} segundos!`;
+
     questionElement.textContent = "Quiz acabado!";
     optionsContainer.innerHTML = "";
-    feedbackElement.textContent = `Tu puntuación final es: ${score} de ${quizData.length}!`;
-    feedbackElement.textContent += ` La nota del quiz es: ${nota}/10.`;
-    feedbackElement.textContent += ` Tu tiempo final es: ${quizData.length * 10 - timer} segundos!`;
     timerElement.style.display = "none";
-    scoreElement.style.display = "none";
     score2Element.style.display = "none";
     timer2Element.style.display = "none";
+
+    setTimeout(() => {
+        window.location.href = 'perfilJugador.html';
+    }, 5000);
 }
-
-document.getElementById('start-quiz-btn').addEventListener('click', function() {
-    document.getElementById('start-quiz-btn').style.display = 'none';
-    startQuiz();
-});
-
-function endQuiz() {
-    window.location.href = 'perfilJugador.html';
-}
-
-document.getElementById('start-quiz-btn').addEventListener('click', function() {
-    document.getElementById('start-quiz-btn').style.display = 'none'; // Oculta el botón de inicio
-    document.getElementById('score').style.display = 'block';
-    document.getElementById('timer').style.display = 'block';
-    document.getElementById('next-btn').style.display = 'block';
-    startQuiz(); 
-});
