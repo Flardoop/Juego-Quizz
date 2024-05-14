@@ -141,4 +141,5 @@ function endQuiz() {
     setTimeout(() => {
         window.location.href = 'perfilJugador.html';
     }, 5000);
+    
 }
