@@ -24,8 +24,87 @@ const quizData = [
     { question: "¿Cuál es la capital de Canadá?", options: ["Toronto", "Montreal", "Vancouver", "Ottawa"], answer: "Ottawa" },
     { question: "¿Cuál es la capital de Australia?", options: ["Sídney", "Melbourne", "Brisbane", "Canberra"], answer: "Canberra" },
     { question: "¿Cuál es la capital de México?", options: ["Ciudad de México", "Guadalajara", "Monterrey", "Puebla"], answer: "Ciudad de México" },
-    { question: "¿Cuál es la capital de Sudáfrica?", options: ["Ciudad del Cabo", "Johannesburgo", "Pretoria", "Durban"], answer: "Pretoria" }
+    { question: "¿Cuál es la capital de Sudáfrica?", options: ["Ciudad del Cabo", "Johannesburgo", "Pretoria", "Durban"], answer: "Pretoria" },
+        { question: "¿Cuál es la fórmula química del agua?", options: ["H2O", "CO2", "NaCl", "O2"], answer: "H2O" },
+        { question: "¿Quién es conocido como el padre de la teoría de la relatividad?", options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Stephen Hawking"], answer: "Albert Einstein" },
+        // Agrega más preguntas de ciencia aquí
+    
+        // Animales
+        { question: "¿Cuál es el animal más grande del mundo?", options: ["Elefante", "Ballena azul", "Jirafa", "Tiburón ballena"], answer: "Ballena azul" },
+        { question: "¿Qué tipo de animal es un koala?", options: ["Oso", "Marsupial", "Primate", "Roedor"], answer: "Marsupial" },
+        // Agrega más preguntas de animales aquí
+    
+        // Astrología
+        { question: "¿Cuál es el planeta más grande del sistema solar?", options: ["Júpiter", "Saturno", "Neptuno", "Urano"], answer: "Júpiter" },
+        { question: "¿Qué es un eclipse solar?", options: ["Cuando la luna pasa entre la tierra y el sol", "Cuando la tierra pasa entre el sol y la luna", "Cuando el sol pasa entre la tierra y la luna", "Cuando la luna pasa entre la tierra y una estrella"], answer: "Cuando la luna pasa entre la tierra y el sol" },
+        // Agrega más preguntas de astrología aquí
+    
+        // Arte
+        { question: "¿Quién pintó la Mona Lisa?", options: ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Claude Monet"], answer: "Leonardo da Vinci" },
+        { question: "¿Qué movimiento artístico surgió en Italia en el siglo XIV?", options: ["Renacimiento", "Barroco", "Cubismo", "Gótico"], answer: "Renacimiento" },
+        // Agrega más preguntas de arte aquí
+    
+        // Deporte
+        { question: "¿En qué deporte se juega en un campo llamado 'cancha'?", options: ["Fútbol", "Baloncesto", "Tenis", "Golf"], answer: "Fútbol" },
+        { question: "¿Cuál de estos deportes no se juega con una pelota?", options: ["Tenis", "Hockey", "Natación", "Boxeo"], answer: "Natación" },
+        // Agrega más preguntas de deportes aquí
+    
+        // Geografía
+        { question: "¿Cuál es la capital de Francia?", options: ["París", "Berlín", "Madrid", "Roma"], answer: "París" },
+        { question: "¿Cuál es la capital de España?", options: ["París", "Berlín", "Madrid", "Roma"], answer: "Madrid" },
+        // Animales
+    { question: "¿Cuál es el animal más rápido del mundo?", options: ["Guepardo", "Leopardo", "Lobo", "Tigre"], answer: "Guepardo", theme: "animales" },
+    { question: "¿Qué animal es conocido por su camuflaje?", options: ["Camaleón", "León", "Elefante", "Rinoceronte"], answer: "Camaleón", theme: "animales" },
+    { question: "¿Cuál es el animal más venenoso del mundo?", options: ["Araña de rincón", "Serpiente de coral", "Medusa", "Rana dorada venenosa"], answer: "Rana dorada venenosa", theme: "animales" },
+    { question: "¿Cuál es el animal más grande del mundo?", options: ["Elefante", "Ballena azul", "Jirafa", "Tiburón ballena"], answer: "Ballena azul", theme: "animales" },
+    { question: "¿Qué animal es conocido por sus alas de colores vibrantes?", options: ["Colibrí", "Golondrina", "Cuervo", "Gaviota"], answer: "Colibrí", theme: "animales" },
+    { question: "¿Cuál es el animal más largo del mundo?", options: ["Anaconda", "Gusano gigante", "Boa constrictor", "Serpiente de cascabel"], answer: "Anaconda", theme: "animales" },
+    { question: "¿Qué animal es conocido por su capacidad de regeneración?", options: ["Estrella de mar", "Pulpo", "Calamar", "Medusa"], answer: "Estrella de mar", theme: "animales" },
+    { question: "¿Cuál es el animal que hiberna durante el invierno?", options: ["Oso polar", "León", "Tigre", "Jirafa"], answer: "Oso polar", theme: "animales" },
+    { question: "¿Cuál es el animal más fuerte en relación a su tamaño?", options: ["Escarabajo rinoceronte", "Elefante", "Rinoceronte", "León"], answer: "Escarabajo rinoceronte", theme: "animales" },
+    { question: "¿Qué animal es conocido como el 'rey de la selva'?", options: ["León", "Tigre", "Leopardo", "Jaguar"], answer: "León", theme: "animales" },
+    { question: "¿Cuál es el animal más inteligente después del ser humano?", options: ["Delfín", "Mono", "Perro", "Elefante"], answer: "Delfín", theme: "animales" },
+    { question: "¿Qué animal es conocido por dormir boca arriba?", options: ["Murciélago", "Gato", "Perro", "Oso"], answer: "Murciélago", theme: "animales" },
+    { question: "¿Cuál es el animal que tiene la piel más dura?", options: ["Cocodrilo", "Tortuga", "Armadillo", "Hormiga"], answer: "Cocodrilo", theme: "animales" },
+    { question: "¿Qué animal es conocido por vivir en colonias y construir grandes montículos?", options: ["Hormiga", "Abeja", "Termita", "Saltamontes"], answer: "Termita", theme: "animales" },
+    { question: "¿Cuál es el animal que puede correr más tiempo sin fatigarse?", options: ["Lobo", "Cebra", "Guepardo", "Perro"], answer: "Lobo", theme: "animales" },
+
+    // Geografía
+    { question: "¿Cuál es el país más grande del mundo por área terrestre?", options: ["Rusia", "China", "Canadá", "Estados Unidos"], answer: "Rusia", theme: "geografía" },
+    { question: "¿Cuál es la montaña más alta del mundo?", options: ["Monte Everest", "K2", "Kangchenjunga", "Lhotse"], answer: "Monte Everest", theme: "geografía" },
+    { question: "¿Cuál es el río más largo del mundo?", options: ["Amazonas", "Nilo", "Yangtsé", "Misisipi"], answer: "Amazonas", theme: "geografía" },
+    { question: "¿Cuál es el desierto más grande del mundo?", options: ["Sahara", "Antártida", "Gobi", "Kalahari"], answer: "Antártida", theme: "geografía" },
+    { question: "¿Cuál es el país más poblado del mundo?", options: ["China", "India", "Estados Unidos", "Indonesia"], answer: "China", theme: "geografía" },
+    { question: "¿Cuál es la ciudad más poblada del mundo?", options: ["Tokio", "Mumbai", "Pekín", "Shanghái"], answer: "Tokio", theme: "geografía" },
+    { question: "¿Cuál es la isla más grande del mundo?", options: ["Groenlandia", "Australia", "Nueva Guinea", "Borneo"], answer: "Groenlandia", theme: "geografía" },
+    { question: "¿Cuál es el continente más pequeño del mundo?", options: ["Oceaní", "Europa", "África", "América del Sur"], answer: "Oceanía", theme: "geografía" },
+    { question: "¿Cuál es el lago más profundo del mundo?", options: ["Lago Baikal", "Lago Titicaca", "Lago Victoria", "Gran Lago del Oso"], answer: "Lago Baikal", theme: "geografía" },
+    { question: "¿Cuál es la península más grande del mundo?", options: ["Península arábiga", "Península ibérica", "Península de Kamchatka", "Península de Labrador"], answer: "Península de Kamchatka", theme: "geografía" },
+    // Ciencia
+{ question: "¿Cuál es el proceso por el cual las plantas producen su propio alimento?", options: ["Fotosíntesis", "Respiración", "Germinación", "Polinización"], answer: "Fotosíntesis", theme: "ciencia" },
+{ question: "¿Cuál es el metal más ligero?", options: ["Aluminio", "Litio", "Titanio", "Hidrógeno"], answer: "Litio", theme: "ciencia" },
+{ question: "¿Cuál es el ácido que se encuentra en los limones?", options: ["Ácido cítrico", "Ácido acético", "Ácido sulfúrico", "Ácido clorhídrico"], answer: "Ácido cítrico", theme: "ciencia" },
+{ question: "¿Cuál es el hueso más largo del cuerpo humano?", options: ["Fémur", "Tibia", "Radio", "Húmero"], answer: "Fémur", theme: "ciencia" },
+{ question: "¿Cuál es el componente más abundante en la atmósfera terrestre?", options: ["Nitrógeno", "Oxígeno", "Dióxido de carbono", "Argón"], answer: "Nitrógeno", theme: "ciencia" },
+{ question: "¿Cuál es la capa más externa de la Tierra?", options: ["Corteza", "Núcleo", "Manto", "Núcleo interno"], answer: "Corteza", theme: "ciencia" },
+{ question: "¿Cuál es la unidad básica de la estructura de los seres vivos?", options: ["Célula", "Átomo", "Molécula", "Gen"], answer: "Célula", theme: "ciencia" },
+{ question: "¿Cuál es la energía almacenada en los alimentos?", options: ["Calorífica", "Cinética", "Química", "Eléctrica"], answer: "Química", theme: "ciencia" },
+{ question: "¿Cuál es la lente que se utiliza para corregir la miopía?", options: ["Lente cóncava", "Lente convexa", "Lente biconvexa", "Lente plana"], answer: "Lente cóncava", theme: "ciencia" },
+{ question: "¿Cuál es el hueso más pequeño del cuerpo humano?", options: ["Estribo", "Martillo", "Yunque", "Clavícula"], answer: "Estribo", theme: "ciencia" },
+
+// Deportes
+{ question: "¿Cuál es el deporte más popular del mundo?", options: ["Fútbol", "Baloncesto", "Críquet", "Tenis"], answer: "Fútbol", theme: "deporte" },
+{ question: "¿En qué deporte se utiliza un palo llamado 'brazo'?", options: ["Hockey", "Golf", "Polo", "Béisbol"], answer: "Polo", theme: "deporte" },
+{ question: "¿En qué deporte se juega en una cancha llamada 'pista'?", options: ["Atletismo", "Baloncesto", "Fútbol", "Tenis"], answer: "Atletismo", theme: "deporte" },
+{ question: "¿Cuál es el deporte de raqueta más rápido del mundo?", options: ["Squash", "Tenis", "Bádminton", "Ping Pong"], answer: "Squash", theme: "deporte" },
+{ question: "¿En qué deporte se usa un disco volador?", options: ["Ultimate Frisbee", "Golf", "Disco", "Voleibol"], answer: "Ultimate Frisbee", theme: "deporte" },
+{ question: "¿Cuál es el deporte que se juega en un campo llamado 'pista de hielo'?", options: ["Patinaje sobre hielo", "Hockey sobre hielo", "Curling", "Bobsleigh"], answer: "Patinaje sobre hielo", theme: "deporte" },
+{ question: "¿Cuál es el deporte que se juega en un campo llamado 'cancha de squash'?", options: ["Squash", "Tenis", "Pádel", "Frontón"], answer: "Squash", theme: "deporte" },
+{ question: "¿En qué deporte se utiliza un arco y flechas?", options: ["Tiro con arco", "Caza", "Polo", "Hockey"], answer: "Tiro con arco", theme: "deporte" },
+{ question: "¿Cuál es el deporte que se juega en un campo llamado 'pista de tenis'?", options: ["Tenis", "Bádminton", "Pádel", "Squash"], answer: "Tenis", theme: "deporte" },
+{ question: "¿En qué deporte se utiliza un casco protector?", options: ["Fútbol americano", "Rugby", "Hockey", "Béisbol"], answer: "Fútbol americano", theme: "deporte" },
 ];
+
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
