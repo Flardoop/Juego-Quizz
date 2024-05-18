@@ -153,3 +153,8 @@ span {
 .waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
 }
+
+.quiz-feedback {
+    font-weight: bold;
+    color: #007bff; 
+}
