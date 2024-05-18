@@ -63,10 +63,14 @@ document.getElementById('start-quiz-btn').addEventListener('click', function() {
 });
 
 function startQuiz() {
+    timer = quizData.length * 10;
+
     document.getElementById("question-container").style.display = 'block';
     document.getElementById("score").style.display = 'block';
     document.getElementById("timer").style.display = 'block';
+
     showQuestion();
+
     startTimer();
 }
 
