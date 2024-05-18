@@ -113,6 +113,23 @@ function startTimer() {
     }, 1000);
 }
 
+document.getElementById('restart-btn').addEventListener('click', function() {
+    currentQuestionIndex = 0;
+    score = 0;
+    timer = 0;
+    clearInterval(interval);
+    
+    notasElement.textContent = "";
+    feedbackElement.textContent = "";
+    timerElement.textContent = "";
+    scoreElement.textContent = "";
+
+    document.getElementById('restart-container').style.display = 'none';
+
+    startQuiz();
+});
+
+
 function endQuiz() {
     clearInterval(interval);
     let nota = (score * 10) / quizData.length;
@@ -129,17 +146,15 @@ function endQuiz() {
         message = `¡Excelente, ${userName}, has sacado un sobresaliente en el quiz!`;
     }
 
-    notasElement.textContent = message;
-    feedbackElement.textContent = `Tu puntuación final es: ${score} de ${quizData.length}! La nota del quiz es: ${nota}/10. Tu tiempo final es: ${quizData.length * 10 - timer} segundos!`;
+    notasElement.innerHTML = `<span class="quiz-feedback">${message}</span>`;
+    feedbackElement.innerHTML = `Tu puntuación final es: <span class="quiz-feedback">${score} de ${quizData.length}</span>!<br>La nota del quiz es: <span class="quiz-feedback">${nota}/10</span>.<br>Tu tiempo final es: <span class="quiz-feedback">${quizData.length * 10 - timer} segundos</span>!`;
 
     questionElement.textContent = "Quiz acabado!";
     optionsContainer.innerHTML = "";
     timerElement.style.display = "none";
     score2Element.style.display = "none";
     timer2Element.style.display = "none";
-
-    setTimeout(() => {
-        window.location.href = 'perfilJugador.html';
-    }, 5000);
-    
+    document.getElementById('restart-container').style.display = 'block';
 }
+
+
