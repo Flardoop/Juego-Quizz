@@ -110,3 +110,30 @@ button:hover {
 .waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
 }
+/* Botones adicionales */
+button#exit-quiz-btn {
+    background-color: #ffc107;
+    color: #000;
+}
+
+button#exit-quiz-btn:hover {
+    background-color: #e0a800;
+}
+
+button#end-quiz-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+button#end-quiz-btn:hover {
+    background-color: #c82333;
+}
+
+button#return-home-btn {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+button#return-home-btn:hover {
+    background-color: #5a6268;
+}

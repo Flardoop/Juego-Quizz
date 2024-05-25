@@ -106,6 +106,8 @@ const quizData = [
 ];
 
 
+// Función para barajar el array de preguntas
+// Función para barajar el array de preguntas
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -113,6 +115,7 @@ function shuffleArray(array) {
     }
 }
 
+// Barajamos las preguntas al inicio
 shuffleArray(quizData);
 
 let userName;
@@ -131,6 +134,8 @@ const notasElement = document.getElementById("mensajenota");
 const score2Element = document.getElementById("score");
 const timer2Element = document.getElementById("timer");
 
+const backgroundMusic = document.getElementById("background-music");
+
 let currentQuestionIndex = 0;
 let score = 0;
 let timer;
@@ -139,6 +144,18 @@ let interval;
 document.getElementById('start-quiz-btn').addEventListener('click', function() {
     document.getElementById('start-quiz-btn').style.display = 'none';
     startQuiz();
+});
+
+document.getElementById('exit-quiz-btn').addEventListener('click', function() {
+    if (confirm('¿Estás seguro de que deseas salir de la partida?')) {
+        location.reload();
+    }
+});
+
+document.getElementById('end-quiz-btn').addEventListener('click', function() {
+    if (confirm('¿Estás seguro de que deseas terminar el intento?')) {
+        endQuiz();
+    }
 });
 
 function startQuiz() {
@@ -151,6 +168,7 @@ function startQuiz() {
     showQuestion();
 
     startTimer();
+    playMusic();
 }
 
 function showQuestion() {
@@ -212,6 +230,9 @@ document.getElementById('restart-btn').addEventListener('click', function() {
     startQuiz();
 });
 
+document.getElementById('return-home-btn').addEventListener('click', function() {
+    location.reload();
+});
 
 function endQuiz() {
     clearInterval(interval);
@@ -238,6 +259,15 @@ function endQuiz() {
     score2Element.style.display = "none";
     timer2Element.style.display = "none";
     document.getElementById('restart-container').style.display = 'block';
+
+    stopMusic();
 }
 
+function playMusic() {
+    backgroundMusic.play();
+}
 
+function stopMusic() {
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0; // Reiniciar la música al inicio
+}
