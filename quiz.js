@@ -107,7 +107,6 @@ const quizData = [
 
 
 // Función para barajar el array de preguntas
-// Función para barajar el array de preguntas
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -143,6 +142,8 @@ let interval;
 
 document.getElementById('start-quiz-btn').addEventListener('click', function() {
     document.getElementById('start-quiz-btn').style.display = 'none';
+    document.getElementById('exit-quiz-btn').style.display = 'block';
+    document.getElementById('end-quiz-btn').style.display = 'block';
     startQuiz();
 });
 
@@ -227,6 +228,10 @@ document.getElementById('restart-btn').addEventListener('click', function() {
 
     document.getElementById('restart-container').style.display = 'none';
 
+    // Asegurarse de que los botones vuelvan a aparecer
+    document.getElementById('exit-quiz-btn').style.display = 'block';
+    document.getElementById('end-quiz-btn').style.display = 'block';
+
     startQuiz();
 });
 
@@ -259,6 +264,10 @@ function endQuiz() {
     score2Element.style.display = "none";
     timer2Element.style.display = "none";
     document.getElementById('restart-container').style.display = 'block';
+
+    // Ocultar los botones de "Salir de partida" y "Terminar intento"
+    document.getElementById('exit-quiz-btn').style.display = 'none';
+    document.getElementById('end-quiz-btn').style.display = 'none';
 
     stopMusic();
 }
