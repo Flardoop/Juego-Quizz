@@ -69,12 +69,10 @@
             var muteButton = document.getElementById('mute-music-btn');
             audio.volume = 0.5;
 
-            // Intenta reproducir el audio automáticamente
             audio.play().catch(function(error) {
                 console.log('Reproducción automática impedida. El usuario debe interactuar con la página.');
             });
 
-            // Función para silenciar y reactivar la música
             muteButton.onclick = function() {
                 if (audio.muted) {
                     audio.muted = false;
