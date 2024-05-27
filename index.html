@@ -5,34 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de Preguntas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        .btn-music {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
-    <link rel="stylesheet" href="/css/quiz.css">
-    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
-
 </head>
 <body class="montserrat">
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop">
+            <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+            <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+            <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+        </div>
+    </div>
+
     <div class="container">
         <h1 id="input-tittle">Quiz Game</h1>
+        <audio id="background-music" loop>
+            <source src="songs/kh.mp3" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+        <button id="mute-music-btn" class="btn-music">Silenciar Música</button>
+
         <div id="name-input-container">
             <input type="text" id="name-input" class="form-control mb-3" placeholder="Ingresa tu nombre">
-            <button id="name-submit-btn">Enviar</button>
+            <button id="name-submit-btn" class="btn btn-primary">Enviar</button>
         </div>
-        <button id="start-quiz-btn" style="display: none;">Iniciar Quiz</button>
-        <div id="question-container">
+        <button id="start-quiz-btn" class="btn btn-success" style="display: none;">Iniciar Quiz</button>
+        <div id="question-container" style="display: none;">
             <p id="question"></p>
-            <div id="options-container"
-    
-            </div>
+            <div id="options-container" class="btn-group-vertical"></div>
+            <button id="exit-quiz-btn" class="btn btn-warning mt-3">Salir de la Partida</button>
+            <button id="end-quiz-btn" class="btn btn-danger mt-3">Terminar Intento</button>
         </div>
-        <div id="mensajenota"></div>
-        <div id="feedback"></div>
-
-        <button id="next-btn" style="display: none;">Siguiente</button>
-        <div id="score" style="display: none;">Puntuacion: <span id="score-value">0</span></div>
-        <div id="timer" style="display: none;">Tiempo Siguiente: <span id="timer-value">10</span> seconds</div>
+        <div id="mensajenota" class="mt-3"></div>
+        <div id="feedback" class="mt-3"></div>
+        <div id="score" class="mt-3" style="display: none;">Puntuación: <span id="score-value">0</span></div>
+        <div id="timer" class="mt-3" style="display: none;">Tiempo restante: <span id="timer-value">10</span> segundos</div>
+        <div id="restart-container" style="display: none;">
+            <button id="restart-btn" class="btn btn-primary">Volver a Empezar</button>
+            <button id="return-home-btn" class="btn btn-secondary">Volver al Inicio</button>
+        </div>
     </div>
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('background-music');
+            var muteButton = document.getElementById('mute-music-btn');
+            audio.volume = 0.5;
+
+            // Intenta reproducir el audio automáticamente
+            audio.play().catch(function(error) {
+                console.log('Reproducción automática impedida. El usuario debe interactuar con la página.');
+            });
+
+            // Función para silenciar y reactivar la música
+            muteButton.onclick = function() {
+                if (audio.muted) {
+                    audio.muted = false;
+                    muteButton.innerHTML = 'Silenciar Música';
+                } else {
+                    audio.muted = true;
+                    muteButton.innerHTML = 'Reactivar Música';
+                }
+            };
+        };
+    </script>
     <script src="quiz.js"></script>
 </body>
 </html>

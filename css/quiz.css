@@ -5,21 +5,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    --s: 76px; /* control the size */
-    --c: #1a144a;
-    --_g: conic-gradient(var(--c) 25%,#0000 0) 0 0;
-    background:
-    var(--_g)/calc(2*var(--s)) calc(var(--s)/9.5),
-    var(--_g)/calc(var(--s)/9.5) calc(2*var(--s)),
-    repeating-conic-gradient(#0000 0 25%,var(--c) 0 50%) 
-    var(--s) 0 /calc(2*var(--s)) calc(2*var(--s)),
-    radial-gradient(50% 50%,#2eb044 98%,var(--c)) 
-    0 0/var(--s) var(--s);
-    
+    background-color: #a0f4fa; /* Background color to complement the waves */
 }
 
-
-.montserrat{
+.montserrat {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -31,10 +20,12 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #a0f4fa;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
     border: 5px solid black;
-    box-shadow: 10px 10px ;
-    height: 60vh;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10; /* Ensures container is above the wave animation */
 }
 
 #question-container {
@@ -43,27 +34,27 @@ body {
 
 #options-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     margin-top: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    font-size: 1.2em;
+    width: 200px; /* Fixed width for buttons */
 }
 
 button:hover {
     background-color: #0056b3;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    transform: scale(1.05);
 }
 
 .profile-info,
@@ -93,6 +84,110 @@ span {
     font-weight: bold;
 }
 
-#input-tittle{
-    
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+
+.waveTop {
+    background-size: 50% 100px;
+}
+
+.waveAnimation .waveTop {
+    animation: move_wave 3s;
+    -webkit-animation: move_wave 3s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.waveMiddle {
+    background-size: 50% 120px;
+}
+
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+
+.waveBottom {
+    background-size: 50% 100px;
+}
+
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+.quiz-feedback {
+    font-weight: bold;
+    color: #007bff; 
+}
+
+#question {
+    font-size: 24px;
+    font-weight: bold; 
+    color: #007bff; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    margin-bottom: 20px;
+}
+/* Botones adicionales */
+button#exit-quiz-btn {
+    background-color: #ffc107;
+    color: #000;
+}
+
+button#exit-quiz-btn:hover {
+    background-color: #e0a800;
+}
+
+button#end-quiz-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+button#end-quiz-btn:hover {
+    background-color: #c82333;
+}
+
+button#return-home-btn {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+button#return-home-btn:hover {
+    background-color: #5a6268;
 }
