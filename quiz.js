@@ -27,27 +27,22 @@ const quizData = [
     { question: "¿Cuál es la capital de Sudáfrica?", options: ["Ciudad del Cabo", "Johannesburgo", "Pretoria", "Durban"], answer: "Pretoria" },
         { question: "¿Cuál es la fórmula química del agua?", options: ["H2O", "CO2", "NaCl", "O2"], answer: "H2O" },
         { question: "¿Quién es conocido como el padre de la teoría de la relatividad?", options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Stephen Hawking"], answer: "Albert Einstein" },
-        // Agrega más preguntas de ciencia aquí
     
         // Animales
         { question: "¿Cuál es el animal más grande del mundo?", options: ["Elefante", "Ballena azul", "Jirafa", "Tiburón ballena"], answer: "Ballena azul" },
         { question: "¿Qué tipo de animal es un koala?", options: ["Oso", "Marsupial", "Primate", "Roedor"], answer: "Marsupial" },
-        // Agrega más preguntas de animales aquí
     
         // Astrología
         { question: "¿Cuál es el planeta más grande del sistema solar?", options: ["Júpiter", "Saturno", "Neptuno", "Urano"], answer: "Júpiter" },
         { question: "¿Qué es un eclipse solar?", options: ["Cuando la luna pasa entre la tierra y el sol", "Cuando la tierra pasa entre el sol y la luna", "Cuando el sol pasa entre la tierra y la luna", "Cuando la luna pasa entre la tierra y una estrella"], answer: "Cuando la luna pasa entre la tierra y el sol" },
-        // Agrega más preguntas de astrología aquí
     
         // Arte
         { question: "¿Quién pintó la Mona Lisa?", options: ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Claude Monet"], answer: "Leonardo da Vinci" },
         { question: "¿Qué movimiento artístico surgió en Italia en el siglo XIV?", options: ["Renacimiento", "Barroco", "Cubismo", "Gótico"], answer: "Renacimiento" },
-        // Agrega más preguntas de arte aquí
     
         // Deporte
         { question: "¿En qué deporte se juega en un campo llamado 'cancha'?", options: ["Fútbol", "Baloncesto", "Tenis", "Golf"], answer: "Fútbol" },
         { question: "¿Cuál de estos deportes no se juega con una pelota?", options: ["Tenis", "Hockey", "Natación", "Boxeo"], answer: "Natación" },
-        // Agrega más preguntas de deportes aquí
     
         // Geografía
         { question: "¿Cuál es la capital de Francia?", options: ["París", "Berlín", "Madrid", "Roma"], answer: "París" },
@@ -106,7 +101,6 @@ const quizData = [
 ];
 
 
-// Función para barajar el array de preguntas
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -114,7 +108,6 @@ function shuffleArray(array) {
     }
 }
 
-// Barajamos las preguntas al inicio
 shuffleArray(quizData);
 
 let userName;
@@ -228,7 +221,6 @@ document.getElementById('restart-btn').addEventListener('click', function() {
 
     document.getElementById('restart-container').style.display = 'none';
 
-    // Asegurarse de que los botones vuelvan a aparecer
     document.getElementById('exit-quiz-btn').style.display = 'block';
     document.getElementById('end-quiz-btn').style.display = 'block';
 
@@ -265,7 +257,6 @@ function endQuiz() {
     timer2Element.style.display = "none";
     document.getElementById('restart-container').style.display = 'block';
 
-    // Ocultar los botones de "Salir de partida" y "Terminar intento"
     document.getElementById('exit-quiz-btn').style.display = 'none';
     document.getElementById('end-quiz-btn').style.display = 'none';
 
@@ -278,5 +269,5 @@ function playMusic() {
 
 function stopMusic() {
     backgroundMusic.pause();
-    backgroundMusic.currentTime = 0; // Reiniciar la música al inicio
+    backgroundMusic.currentTime = 0; 
 }
